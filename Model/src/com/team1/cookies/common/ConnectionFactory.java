@@ -1,4 +1,4 @@
-package com.hassan.aicam.common;
+package com.team1.cookies.common;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -42,7 +42,7 @@ public class ConnectionFactory {
         return password;
     }
     static {
-        ResourceBundle bundle = ResourceBundle.getBundle("com.hassan.aicam.common.db");
+        ResourceBundle bundle = ResourceBundle.getBundle("com.team1.cookies.common.db");
         driver = bundle.getString("db.driver").toString();
         url = bundle.getString("url").toString();
         username = bundle.getString("username").toString();

@@ -1,8 +1,8 @@
-package com.hassan.aicam.common;
+package com.team1.cookies.common;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 
-public class AICSException extends Exception{
+public class CookiesException extends Exception{
     String exactMessage = "";
 
     public String getExactMessage() {
