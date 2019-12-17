@@ -7,9 +7,9 @@
       <property
          name="jspName">/account.jsf</property>
       <property
-         name="x">635.0</property>
+         name="x">87.0</property>
       <property
-         name="y">164.19531</property>
+         name="y">178.49414</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -18,20 +18,20 @@
       <property
          name="jspName">/cart.jsf</property>
       <property
-         name="x">805.0</property>
+         name="x">676.0</property>
       <property
-         name="y">256.59766</property>
+         name="y">190.19531</property>
       <property
          name="wildcard">false</property>
-   </Page
+   </Page>
    <Page
       id="Page12">
       <property
          name="jspName">/signin.jsf</property>
       <property
-         name="x">252.0</property>
+         name="x">391.0</property>
       <property
-         name="y">72.59766</property>
+         name="y">-150.20703</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -40,9 +40,9 @@
       <property
          name="jspName">/home.jsf</property>
       <property
-         name="x">704.0</property>
+         name="x">332.0</property>
       <property
-         name="y">59.896484</property>
+         name="y">49.49414</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -51,9 +51,9 @@
       <property
          name="jspName">/signup.jsf</property>
       <property
-         name="x">523.0</property>
+         name="x">264.0</property>
       <property
-         name="y">293.59766</property>
+         name="y">-149.50586</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -67,7 +67,7 @@
       <property
          name="fromOutcome">success</property>
       <property
-         name="sdm:polyPoints">R50,293.0,72.24707,663.0,59.5459,L50</property>
+         name="sdm:polyPoints">B50,391.0,-96.55762,335.5,-4.8564453,T56</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -79,7 +79,7 @@
       <property
          name="fromOutcome">account</property>
       <property
-         name="sdm:polyPoints">T50,523.0,239.24707,704.0,113.5459,B50</property>
+         name="sdm:polyPoints">B50,264.0,-95.856445,328.5,-4.8564453,T44</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -87,44 +87,66 @@
       from="Page5"
       to="Page3">
       <property
-         name="fromOutcome">go to cart</property>
-      <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">R50,379.0,13.597656,603.0,12.442383,L50</property>
+         name="fromOutcome">go to cart</property>
+      <property
+         name="sdm:polyPoints">T56,482.5,385.79297,676.0,244.5459,B50</property>
    </NavigationCase>
    <Page
       id="Page4">
       <property
-         name="wildcard">false</property>
-      <property
-         name="y">11.494141</property>
-      <property
-         name="x">52.0</property>
-      <property
          name="jspName">/offers.jsf</property>
+      <property
+         name="x">471.0</property>
+      <property
+         name="y">185.39062</property>
+      <property
+         name="wildcard">false</property>
    </Page>
    <Page
       id="Page5">
       <property
-         name="wildcard">false</property>
-      <property
-         name="y">13.948242</property>
-      <property
-         name="x">338.0</property>
-      <property
          name="jspName">/offerDetails.jsf</property>
+      <property
+         name="x">479.0</property>
+      <property
+         name="y">440.14355</property>
+      <property
+         name="wildcard">false</property>
    </Page>
    <NavigationCase
       islink="true"
-      id="NavigationCase15"
+      id="NavigationCase1513"
       from="Page4"
       to="Page5">
       <property
-         name="fromOutcome">go details</property>
-      <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">R50,93.0,11.143555,297.0,13.597656,L50</property>
+         name="fromOutcome">go details</property>
+      <property
+         name="sdm:polyPoints">B50,471.0,239.04004,475.5,385.79297,T44</property>
    </NavigationCase>
+   <Page
+      id="Page8">
+      <property
+         name="jspName">/about.jsf</property>
+      <property
+         name="x">97.0</property>
+      <property
+         name="y">314.69434</property>
+      <property
+         name="wildcard">false</property>
+   </Page>
+   <Page
+      id="Page9">
+      <property
+         name="jspName">/suggestions.jsf</property>
+      <property
+         name="x">259.0</property>
+      <property
+         name="y">280.49414</property>
+      <property
+         name="wildcard">false</property>
+   </Page>
 </SDM>
