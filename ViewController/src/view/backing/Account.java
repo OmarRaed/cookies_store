@@ -8,13 +8,9 @@ import javax.faces.component.html.HtmlCommandButton;
 import javax.faces.component.html.HtmlForm;
 import javax.faces.component.html.HtmlInputText;
 
-import javax.mail.Address;
-
 import com.team1.cookies.dao.AccountDao;
-
 import com.team1.cookies.dao.AccountDaoImp;
-
-import model.dto.AccountDto;
+import com.team1.cookies.dto.AccountDto;
 
 @ManagedBean(name = "backing_account")
 @RequestScoped

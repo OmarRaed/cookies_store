@@ -7,11 +7,18 @@ import com.team1.cookies.dto.CustomerDto;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
+
 import javax.validation.constraints.NotNull;
 
 @ManagedBean(name = "sign_in")
 @RequestScoped
 public class SignIn {
+
+    public final static int USER_NOT_FOUND = -10000;
+
     public SignIn() {
     }
     AccountBao account = new AccountBaoImp();
@@ -46,7 +53,15 @@ public class SignIn {
         customer.setEmail(this.getEmail());
         customer.setPassword(this.getPassword());
 
-        if (account.sign_in(customer)) {
+        int customerId = account.sign_in(customer);
+
+        if (customerId != USER_NOT_FOUND) {
+
+            //set the customer ID
+            HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                            .getExternalContext()
+                                                            .getSession(true);
+            session.setAttribute("customerId", customerId);
 
             return "success";
         } else {

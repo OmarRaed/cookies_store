@@ -81,4 +81,50 @@
       <property
          name="sdm:polyPoints">T50,523.0,239.24707,704.0,113.5459,B50</property>
    </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase6"
+      from="Page5"
+      to="Page3">
+      <property
+         name="fromOutcome">go to cart</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">R50,379.0,13.597656,603.0,12.442383,L50</property>
+   </NavigationCase>
+   <Page
+      id="Page4">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">11.494141</property>
+      <property
+         name="x">52.0</property>
+      <property
+         name="jspName">/offers.jsf</property>
+   </Page>
+   <Page
+      id="Page5">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">13.948242</property>
+      <property
+         name="x">338.0</property>
+      <property
+         name="jspName">/offerDetails.jsf</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase15"
+      from="Page4"
+      to="Page5">
+      <property
+         name="fromOutcome">go details</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">R50,93.0,11.143555,297.0,13.597656,L50</property>
+   </NavigationCase>
 </SDM>

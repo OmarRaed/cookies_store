@@ -18,7 +18,11 @@ import com.team1.cookies.dao.CartDao;
 
 import com.team1.cookies.dao.CartDaoImp;
 
-import model.dto.CartDto;
+import com.team1.cookies.dto.CartDto;
+
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
 
 @ManagedBean(name = "backing_cart")
 @RequestScoped
@@ -37,14 +41,18 @@ public class Cart {
 
     @PostConstruct
     public void init() {
-        cartList = cartDao.getCart(1);
-        try{
-        for (CartDto cart : cartList)
-            totalPrice += cart.getPrice();
-        }catch(NullPointerException e){
-            
+        HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                        .getExternalContext()
+                                                        .getSession(true);
+        int customerId = (Integer) session.getAttribute("customerId");
+        cartList = cartDao.getCart(customerId);
+        try {
+            for (CartDto cart : cartList)
+                totalPrice += cart.getPrice();
+        } catch (NullPointerException e) {
+
         }
-        
+
     }
 
     public void setCheckoutButton(HtmlCommandButton checkoutButton) {

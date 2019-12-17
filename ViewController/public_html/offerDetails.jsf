@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='windows-1256'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body style="font-family:garamond;background-size: cover;color:#83677B;">
+            <h:form>
+                <table style="padding:90px; padding-top: 70px;padding-left:250px">
+                    <tr>
+                        <td>
+                            <img src="data:image/png;base64,#{backing_details.string_image}" alt="Image is not exist"
+                                 height="350" width="450"/>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <h:outputText value="#{backing_details.offer_describe}"
+                                          style="font-size:260%;font-weight:bold;margin-top:40"/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <h:outputText value="Price: "/>
+                             
+                            <h:outputText value="#{backing_details.offer_price}"/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <h:outputText value="Quantity:"/>
+                             
+                            <br/>
+                             
+                            <input value="#{backing_details.offer_quantity}" type="number" required="required" min="1"
+                                   max="#{backing_details.offer_quantity}" step="1" readonly="readonly"/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <br/>
+                             
+                            <center>
+                                <h:commandButton value="ADD TO CART"
+                                                 style="height:50px; width:250px; background-color:#83677B; border:none; color:white;"
+                                                 action="#{backing_details.offersCart}"></h:commandButton>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </h:form>
+        </h:body>
+    </html>
+</f:view>

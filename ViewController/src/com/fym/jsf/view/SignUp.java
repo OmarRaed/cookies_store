@@ -7,6 +7,10 @@ import com.team1.cookies.dto.CustomerDto;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
+
 import javax.validation.constraints.NotNull;
 
 @ManagedBean(name = "sign_up")
@@ -69,7 +73,6 @@ public class SignUp {
 
     public String submit() {
 
-        System.err.println("hiiiiiiiiii");
         customer.setFirst_name(this.getFirst_name());
         customer.setLast_name(this.getLast_name());
         customer.setEmail(this.getEmail());
@@ -77,9 +80,19 @@ public class SignUp {
         customer.setPassword(this.getPassword());
         if (account.sign_up(customer)) {
 
+            customer.setEmail(this.getEmail());
+            customer.setPassword(this.getPassword());
+
+            int customerId = account.sign_in(customer);
+            
+            //set the customer ID
+            HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                            .getExternalContext()
+                                                            .getSession(true);
+            session.setAttribute("customerId", customerId);
+
             return "account";
         } else {
-            System.out.print("wroooooong");
 
             return "signup.jsf";
         }

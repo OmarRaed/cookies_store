@@ -11,7 +11,7 @@ public class AccountBaoImp implements AccountBao {
     }
 
     @Override
-    public boolean sign_in(CustomerDto customer) {
+    public int sign_in(CustomerDto customer) {
         return account.sign_in(customer);
       
     }

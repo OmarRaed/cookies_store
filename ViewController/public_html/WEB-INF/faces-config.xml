@@ -18,4 +18,30 @@
     </navigation-case>
   </navigation-rule>
 
+
+   <managed-bean>
+    <managed-bean-name>backing_offers</managed-bean-name>
+    <managed-bean-class>com.fym.jsf.view.backing_offers</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+   <managed-bean>
+    <managed-bean-name>backing_details</managed-bean-name>
+    <managed-bean-class>com.fym.jsf.view.backing_details</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <navigation-rule>
+    <from-view-id>/offerDetails.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>go to cart</from-outcome>
+      <to-view-id>/cart.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/offers.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>go details</from-outcome>
+      <to-view-id>/offerDetails.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+
 </faces-config>

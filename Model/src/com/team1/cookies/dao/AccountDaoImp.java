@@ -10,9 +10,11 @@ import java.sql.PreparedStatement;
 import javax.sql.rowset.JdbcRowSet;
 import javax.sql.rowset.RowSetProvider;
 
-import model.dto.AccountDto;
+import com.team1.cookies.dto.AccountDto;
 
 public class AccountDaoImp implements AccountDao {
+    
+    public final static int USER_NOT_FOUND = -10000 ;
 
     @Override
     public boolean updateUser(AccountDto account) {
@@ -50,7 +52,7 @@ public class AccountDaoImp implements AccountDao {
         
         }
     @Override
-    public boolean sign_in(CustomerDto customer) {
+    public int sign_in(CustomerDto customer) {
         try(JdbcRowSet jdbc = RowSetProvider.newFactory().createJdbcRowSet();){
             jdbc.setUrl(ConnectionFactory.getUrl());
             jdbc.setUsername(ConnectionFactory.getUsername());
@@ -62,13 +64,13 @@ public class AccountDaoImp implements AccountDao {
                 jdbc.setString(2,customer.getPassword());
             jdbc.execute();
             if(jdbc.next()){
-                return true;
+                return jdbc.getInt("CUSTOMER_ID");
                 }
                 }
         catch(Exception e){
         e.printStackTrace();
         }
-        return false;
+        return USER_NOT_FOUND;
     }
 
     @Override
