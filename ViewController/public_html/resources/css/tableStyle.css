@@ -1,0 +1,13 @@
+@charset "windows-1252";
+
+.order-table{   
+	border-collapse:collapse;
+       margin: 0 auto;
+}
+
+.evenColumn{
+	text-align:center;
+	border-top:1px solid #BBBBBB;
+         padding:5px;
+         background:#83677B;
+}

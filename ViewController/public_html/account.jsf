@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body>
+            <h:form binding="#{backing_account.form1}" id="form1">
+                <table align="center" style="margin-top:70px;">
+                        <tr>
+                            
+                            <td id="firstName">     
+                            
+                                <h:inputText binding="#{backing_account.firstName}" id="FirstName"
+                                        size="12" style="background-color:#bfbfbf; 
+                                             font-size:24pt;border:none;font-family:garamond;margin-right:4px; margin-left:20px; padding:5px">
+                                             <f:passThroughAttribute name="placeholder" value="First Name" />
+                                 </h:inputText>
+                                 
+                                <h:inputText binding="#{backing_account.lastName}" id="LastName" size="12"
+                                       style="background-color:#bfbfbf;font-size:24pt;border:none;font-family:garamond;
+                                        margin-right:0; padding:5px; margin-bottom: 20px">  
+                                <f:passThroughAttribute name="placeholder" value="Last Name" />
+                                 </h:inputText>
+                                 
+                            </td>
+                        </tr>
+                      
+                        <tr>
+
+                            <td>
+                                <h:inputText binding="#{backing_account.address}" id="Address"
+                                size="27"  style="background-color:#bfbfbf; 
+					font-size:24pt;border:none;font-family:garamond; margin:20px; margin-right:0; padding:5px">
+                                <f:passThroughAttribute name="placeholder" value="Address" />
+                                </h:inputText>
+                                 
+                            </td>
+                        </tr><tr>
+                         
+                           
+                            <td>
+                                <h:inputText  binding="#{backing_account.mobile}" id="Mobile" size="27" style="background-color:#bfbfbf; 
+					font-size:24pt;border:none;font-family:garamond; margin:20px; margin-right:0; padding:5px">
+                                <f:passThroughAttribute name="placeholder" value="Mobile" />
+                                </h:inputText>
+                                
+                            </td>
+                        </tr><tr>
+                            <td colspan="2" style="text-align:center;">
+                                <h:commandButton  binding="#{backing_account.saveButton}" action="#{backing_account.saveAccount}" value="Save Changes" style="height:50px ;width:200px ;
+                                         background-color: #83677B ;color:#d9d9d9; border:none;margin-top:35px;margin-left:5px"/>
+                            </td>
+                        </tr>
+                    </table>
+            </h:form>
+        </h:body>
+    </html>
+</f:view>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head> <h:outputStylesheet library="css" name="tableStyle.css" /> </h:head>
+        <h:body>
+            <h:form binding="#{backing_cart.form2}" id="form2">
+            
+                <div style="margin-top:50px">
+                    <h:outputText value="Your Shopping Cart!" id="outputText1" style="font-size:270%;font-weight:bold;color:#83677B;
+                        margin-left:550px;"/>
+                </div>
+                
+                <br/>
+                
+                <div style="text-align: center; margin-left:280px;margin-top:50px;margin-right:100px; padding:8px;" >
+                    <h:dataTable var="cart" value="#{backing_cart.cartList}"
+                        cellpadding="10" cellspacing="1"  width="80%"  frame="hsides" rules="all" >
+                         
+                        <h:column>
+                            <img width="200" src="data:image/png;base64, #{cart.imageString}" height="150"/>
+                        </h:column>
+                        <h:column>
+                        <b style="font-size:160%;color:#83677B" >
+                            <h:outputText value="#{cart.productName}"/>
+                            </b>
+                        <br/>
+                        <br/>
+                        <b style="font-size:120%;color:#83677B">
+                            <h:outputText value="Quatity : "/>
+                            <h:outputText value="#{cart.quantity}"/>
+                           
+                        <br/>
+                            <h:outputText value="Price : "/>
+                            <h:outputText value="#{cart.price}"/>
+                            <h:outputText value=" EGP" />
+                            
+                        <br/>
+                        
+                            </b>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+                
+                <div style="margin-top:40px;margin-left:850px;">
+                    <b style="font-size:180%;"> <h:outputText value="Total Price : " />
+                        <h:outputText value="#{backing_cart.totalPrice}"/> 
+                        <h:outputText value=" EGP" />
+                    </b>
+                </div>
+                
+                
+                <div style="margin-left:835px;">
+                    <h:commandButton binding="#{backing_cart.checkoutButton}" value="PROCEED TO CHECKOUT"
+                        style="height:60px ;width:300px ;background-color: #83677B 
+                        ;color:#d9d9d9; border:none;margin-top:35px;margin-left:5px"/>
+                </div>
+                
+            </h:form>
+            
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_cart-->
+</f:view>
