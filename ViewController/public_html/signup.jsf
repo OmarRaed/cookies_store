@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='windows-1256'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+        <h:head></h:head>
+        <h:body style='background-image:url("cookies.png"); background-repeat:no-repeat; background-size:cover ;'>
+            <h:form>
+                <table align="right" bgcolor="#602040" height="105%" cellpadding="15px" cellspacing="1px"
+                       style=" padding-left:50px; padding-right:10px; background:transparent; margin-right:150px;">
+                    <tr>
+                        <td align="center">
+                            <h1 style="color:#83677B;font-size:350%" align="center">Sign Up</h1>
+                             
+                            <h6 style="color:#83677B;font-size:100%" align="center">
+                                Already have an account?
+                                <a href="signin.jsf" style="color:#83677B;font-size:100%">Sign In</a>
+                            </h6>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td style="padding-left:10px;">
+                            <h:inputText size="15" value="#{sign_up.first_name}" pt:placeholder="First Name" style="background-color:#bfbfbf; 
+						font-size:16pt;border:none;font-family:garamond; margin:15; margin-right:10; padding:1 ;" required="true"></h:inputText>
+                        </td>
+                        <td style="padding-left:10px;">
+                            <h:inputText size="15" value="#{sign_up.last_name}" pt:placeholder="Last Name" style="background-color:#bfbfbf; 
+						font-size:16pt;border:none;font-family:garamond;position:absolute;right:14% ;top:33.9%"></h:inputText>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td style="padding-left:10px;">
+                            <h:inputText id="emailId" value="#{sign_up.email}" size="33" type="email"
+                                         pt:placeholder="Email" style="background-color:#bfbfbf; 
+						font-size:16pt;border:none;font-family:garamond; margin:15; padding:5" required="true"></h:inputText>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td style="padding-left:10px;">
+                            <h:inputSecret id="p1" size="33" value="#{sign_up.password}" pt:placeholder="Password" style="background-color:#bfbfbf;
+						font-size:16pt;border:none;font-family:garamond; margin:15; padding:5" required="true"></h:inputSecret>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td style="padding-left:10px;">
+                            <h:inputSecret id="p2" size="33" value="#{sign_up.confirm_password}"
+                                           pt:placeholder="Confirm Password" style="background-color:#bfbfbf
+						; font-size:16pt;border:none;font-family:garamond; margin:15; margin-bottom:0; padding:5" required="true"></h:inputSecret>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td>
+                            <h:selectBooleanCheckbox style=" color:#83677B;border:none ;position:absolute;left:63.8%;top:63.7%"
+                                                     required="true">I accept the Terms of Use &amp; Privacy Policy</h:selectBooleanCheckbox>
+                        </td>
+                    </tr>
+                     
+                    <tr>
+                        <td>
+                            <h:commandButton value="SIGNUP" action="#{sign_up.submit}"
+                                             style=" color:white;height:46px; width:180px; background-color:#83677B; color:d9d9d9; border:none;position:absolute;left:70%"></h:commandButton>
+                        </td>
+                    </tr>
+                </table>
+                <p style=" margin-left:30px ;font-family:garamond; align:top">
+                    <b style="color:white; font-size:550%;">cookies</b>
+                     
+                    <b style="color:#83677B; font-size:225%">Shop</b>
+                </p>
+            </h:form>
+        </h:body>
+    </html>
+</f:view>

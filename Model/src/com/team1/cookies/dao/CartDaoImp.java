@@ -1,4 +1,6 @@
-package model.dao;
+package com.team1.cookies.dao;
+
+import com.team1.cookies.common.ConnectionFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +18,10 @@ public class CartDaoImp implements CartDao{
         List<CartDto> cartList = null ;
         
         try(JdbcRowSet jdbc = RowSetProvider.newFactory().createJdbcRowSet();){
-                    //set connection url , username and password
-                    jdbc.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:xe");
-                    jdbc.setUsername("cookies_shop");
-                    jdbc.setPassword("cookies");
+            
+            jdbc.setUrl(ConnectionFactory.getUrl());
+            jdbc.setUsername(ConnectionFactory.getUsername());
+            jdbc.setPassword(ConnectionFactory.getPassword());
             
             jdbc.setCommand("SELECT PRODUCT_NAME ,IMAGE , CART_ID, QUANTITY , TOTAL_PRICE " +
                             "FROM CART " +

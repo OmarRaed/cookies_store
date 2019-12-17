@@ -23,5 +23,62 @@
          name="y">256.59766</property>
       <property
          name="wildcard">false</property>
+   </Page
+   <Page
+      id="Page12">
+      <property
+         name="jspName">/signin.jsf</property>
+      <property
+         name="x">252.0</property>
+      <property
+         name="y">72.59766</property>
+      <property
+         name="wildcard">false</property>
    </Page>
+   <Page
+      id="Page13">
+      <property
+         name="jspName">/home.jsf</property>
+      <property
+         name="x">704.0</property>
+      <property
+         name="y">59.896484</property>
+      <property
+         name="wildcard">false</property>
+   </Page>
+   <Page
+      id="Page14">
+      <property
+         name="jspName">/signup.jsf</property>
+      <property
+         name="x">523.0</property>
+      <property
+         name="y">293.59766</property>
+      <property
+         name="wildcard">false</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase15"
+      from="Page12"
+      to="Page13">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">success</property>
+      <property
+         name="sdm:polyPoints">R50,293.0,72.24707,663.0,59.5459,L50</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase16"
+      from="Page14"
+      to="Page13">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">account</property>
+      <property
+         name="sdm:polyPoints">T50,523.0,239.24707,704.0,113.5459,B50</property>
+   </NavigationCase>
 </SDM>

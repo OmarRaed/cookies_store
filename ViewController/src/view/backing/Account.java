@@ -10,9 +10,9 @@ import javax.faces.component.html.HtmlInputText;
 
 import javax.mail.Address;
 
-import model.dao.AccountDao;
+import com.team1.cookies.dao.AccountDao;
 
-import model.dao.AccountDaoImp;
+import com.team1.cookies.dao.AccountDaoImp;
 
 import model.dto.AccountDto;
 

@@ -14,9 +14,9 @@ import javax.faces.component.html.HtmlDataTable;
 import javax.faces.component.html.HtmlForm;
 import javax.faces.component.html.HtmlOutputText;
 
-import model.dao.CartDao;
+import com.team1.cookies.dao.CartDao;
 
-import model.dao.CartDaoImp;
+import com.team1.cookies.dao.CartDaoImp;
 
 import model.dto.CartDto;
 
