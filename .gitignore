@@ -12,4 +12,4 @@ javadoc/
 # lock file, a part of Oracle Credential Store Framework
 cwallet.sso.lck
 
-#Model/src/com/team1/cookies/common/db.properties
+Model/src/com/team1/cookies/common/db.properties
