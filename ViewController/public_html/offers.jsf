@@ -1,9 +1,13 @@
 <?xml version='1.0' encoding='windows-1256'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui">
+       <html xmlns:p="http://primefaces.org/ui" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
         <h:head></h:head>
         <h:body style=" color:#83677B; font-family:garamond;background-size: cover;">
+            <ui:composition template="/layout.jsf">
+            <ui:define name="content">
             <p style="font-size:280%;font-weight:bold;margin-left:40px;margin-top:50px;" align="center">Today's Offers</p>
             <h:form>
                 <p:contentFlow value="#{backing_offers.offersList}" var="offer" styleClass="content">
@@ -19,6 +23,8 @@
                     </p:commandLink>
                 </p:contentFlow>
             </h:form>
+            </ui:define>
+            </ui:composition>
         </h:body>
     </html>
 </f:view>
