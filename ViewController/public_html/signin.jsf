@@ -7,20 +7,20 @@
         <h:body  text="#83677B"
                 style="font-family:garamond; background-image:url(&quot;cookies.png&quot;); background-repeat:no-repeat; background-size:cover;">
             <h:form style="font-size:large;">
-                <table align="right" bgcolor="#602040" width="100" height="450" cellpadding="6" cellspacing="5"
-                       style="padding-left:20px; padding-right:10px; background:transparent; margin-right:180px;
-                       position:absolute;top:70px;right:290px; ">
+                <table align="right" bgcolor="#602040" width="25%" height="80%" cellpadding="2" cellspacing="5"
+                       style="padding-left:20px; padding-right:10px; background:transparent; margin-left:850px;
+                       position:absolute;margin-top:30px ">
                       
                     <tr>
                         <td align="center">
                             <h1 style="color:#83677B; font-size:400%;" align='center'>
-                                &#160;
+                                Sign In
                             </h1>
                         </td>
                     </tr>
                      
                     <tr>
-                        <td style="font-size:large; color:#83677B;" align="center" >Do you have an account?<a href="signup.jsf" style="font-size:large; color:#83677B;" > Create one</a></td>
+                        <td style="font-size:large; color:#83677B;" align="center" >Don't have an account?<a href="signup.jsf" style="font-size:large; color:#83677B;" >Create one</a></td>
                     </tr>
                      
                     <tr>
@@ -42,7 +42,7 @@
                     <tr>
                         <td>
                             <h:commandButton action="#{sign_in.submit}" value="SIGNIN" 
-                                   style="height:50px; width:230px; background-color:#83677B; border:none none none none medium medium medium medium currentColor currentColor currentColor currentColor; margin-top:35px; margin-left:48px; color:white;" />
+                                   style="height:50px; width:230px; background-color:#83677B; border:none ; margin-top:35px; margin-left:48px; color:white;" />
                                    
                         </td>
                     </tr>

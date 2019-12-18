@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui">
+        <h:head></h:head>
+        <h:body>
+            <h:form>
+                <p:dataGrid var="product" value="#{backing_products_list.products}" columns="3" layout="grid"
+                            id="products" style="text-align:center;border:0;">
+                    <p:panel style="text-align:center;border:0;">
+                        <h:panelGrid columns="1" style="width:100%;text-align:center;border:0;">
+                            <p:commandLink action="#{backing_products_list.productSelected}" styleClass="content">
+                                <img src="data:image/png;base64, #{product.imageString}"
+                                     style="max-width: 100%; border:0;"/>
+                                     <f:param name="productId" value="#{product.id}"/>
+                                <h:outputText value="#{product.productName}" style="font-size:180%;color:#83677B"/>
+                            </p:commandLink>
+                        </h:panelGrid>
+                    </p:panel>
+                </p:dataGrid>
+            </h:form>
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_products_list-->
+</f:view>

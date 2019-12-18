@@ -7,7 +7,7 @@
         <h:body style='background-image:url("cookies.png"); background-repeat:no-repeat; background-size:cover ;'>
             <h:form>
                 <table align="right" bgcolor="#602040" height="105%" cellpadding="15px" cellspacing="1px"
-                       style=" padding-left:50px; padding-right:10px; background:transparent; margin-right:150px;">
+                       style=" padding-left:50px; padding-right:10px; background:transparent; margin-right:120px;">
                     <tr>
                         <td align="center">
                             <h1 style="color:#83677B;font-size:350%" align="center">Sign Up</h1>
@@ -21,49 +21,47 @@
                      
                     <tr>
                         <td style="padding-left:10px;">
-                            <h:inputText size="15" value="#{sign_up.first_name}" pt:placeholder="First Name" style="background-color:#bfbfbf; 
-						font-size:16pt;border:none;font-family:garamond; margin:15; margin-right:10; padding:1 ;" required="true"></h:inputText>
+                            <h:inputText size="13" value="#{sign_up.first_name}" 
+                            pt:placeholder="First Name" style="background-color:#bfbfbf; 
+                            font-size:16pt;border:none;font-family:garamond;  padding:3px; margin:15; margin-right:10; padding:1 ;" 
+                            required="true"></h:inputText>
                         </td>
                         <td style="padding-left:10px;">
-                            <h:inputText size="15" value="#{sign_up.last_name}" pt:placeholder="Last Name" style="background-color:#bfbfbf; 
-						font-size:16pt;border:none;font-family:garamond;position:absolute;right:14% ;top:33.9%"></h:inputText>
+                            <h:inputText size="13" value="#{sign_up.last_name}"
+                            pt:placeholder="Last Name" style="background-color:#bfbfbf; 
+                            font-size:16pt;border:none;font-family:garamond; padding:3px; position:absolute;right:13% ;top:41.05%"></h:inputText>
                         </td>
                     </tr>
                      
                     <tr>
                         <td style="padding-left:10px;">
-                            <h:inputText id="emailId" value="#{sign_up.email}" size="33" type="email"
+                            <h:inputText id="emailId" value="#{sign_up.email}" size="29" type="email"
                                          pt:placeholder="Email" style="background-color:#bfbfbf; 
-						font-size:16pt;border:none;font-family:garamond; margin:15; padding:5" required="true"></h:inputText>
+						font-size:16pt;border:none;font-family:garamond; padding:3px;  margin:15; padding:5" required="true"></h:inputText>
                         </td>
                     </tr>
                      
                     <tr>
                         <td style="padding-left:10px;">
-                            <h:inputSecret id="p1" size="33" value="#{sign_up.password}" pt:placeholder="Password" style="background-color:#bfbfbf;
-						font-size:16pt;border:none;font-family:garamond; margin:15; padding:5" required="true"></h:inputSecret>
+                            <h:inputSecret id="p1" size="29" value="#{sign_up.password}" pt:placeholder="Password" style="background-color:#bfbfbf;
+						font-size:16pt;border:none;font-family:garamond; padding:3px;  margin:15; padding:5" required="true"></h:inputSecret>
                         </td>
                     </tr>
                      
                     <tr>
                         <td style="padding-left:10px;">
-                            <h:inputSecret id="p2" size="33" value="#{sign_up.confirm_password}"
+                            <h:inputSecret id="p2" size="29" value="#{sign_up.confirm_password}"
                                            pt:placeholder="Confirm Password" style="background-color:#bfbfbf
-						; font-size:16pt;border:none;font-family:garamond; margin:15; margin-bottom:0; padding:5" required="true"></h:inputSecret>
+						; font-size:16pt;border:none;font-family:garamond; padding:3px;  margin:15; margin-bottom:0; padding:5" required="true"></h:inputSecret>
                         </td>
                     </tr>
                      
                     <tr>
-                        <td>
-                            <h:selectBooleanCheckbox style=" color:#83677B;border:none ;position:absolute;left:63.8%;top:63.7%"
-                                                     required="true">I accept the Terms of Use &amp; Privacy Policy</h:selectBooleanCheckbox>
-                        </td>
-                    </tr>
-                     
-                    <tr>
-                        <td>
+                        <td style="text-align:center;">
                             <h:commandButton value="SIGNUP" action="#{sign_up.submit}"
-                                             style=" color:white;height:46px; width:180px; background-color:#83677B; color:d9d9d9; border:none;position:absolute;left:70%"></h:commandButton>
+                                             style=" color:white;height:50px; width:230px;
+                                             text-align:center;background-color:#83677B; color:d9d9d9;
+                                             border:none;position:absolute;left:67%"></h:commandButton>
                         </td>
                     </tr>
                 </table>

@@ -49,10 +49,16 @@
     </navigation-case>
   </navigation-rule>
   <navigation-rule>
-    <from-view-id>/account.jsf</from-view-id>
+    <from-view-id>/account.jsf</from-view-id></navigation-rule>
+  <navigation-rule>
+    <from-view-id>/product.jsf</from-view-id>
     <navigation-case>
-      <from-outcome>Logout</from-outcome>
-      <to-view-id>/signin.jsf</to-view-id>
+      <from-outcome>goToCart</from-outcome>
+      <to-view-id>/cart.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>productDetails</from-outcome>
+      <to-view-id>/products_list.jsf</to-view-id>
     </navigation-case>
   </navigation-rule>
   <navigation-rule>

@@ -6,9 +6,9 @@
         <h:body>
             <h:form binding="#{backing_cart.form2}" id="form2">
             
-                <div style="margin-top:50px">
+                <div style="text-align: center; margin-top:50px">
                     <h:outputText value="Your Shopping Cart!" id="outputText1" style="font-size:270%;font-weight:bold;color:#83677B;
-                        margin-left:550px;"/>
+                        "/>
                 </div>
                 
                 <br/>

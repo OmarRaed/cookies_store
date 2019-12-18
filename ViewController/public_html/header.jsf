@@ -7,7 +7,7 @@
             <link rel="stylesheet" media="screen" href="resources/css/home.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="resources/css/search.css" type="text/css"/>
         </h:head>
-        <h:body>
+        <h:body  style="margin: 0px !important;">
             <ui:composition>
                 <table style="width:100%;" id="panel" dir="ltr" cellpadding="30">
                     <tr>

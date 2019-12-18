@@ -78,20 +78,24 @@ public class backing_offers implements Serializable {
 
     public String offersDetails() {
         
-        System.out.println("Hi");
+        try{
         FacesContext context = FacesContext.getCurrentInstance();
         Map requestParams = context.getExternalContext().getRequestParameterMap();
         String offerId = (String) requestParams.get("offerId");
         FacesContext context2 = FacesContext.getCurrentInstance();
         HttpSession session = (HttpSession) context2.getExternalContext().getSession(true);
+        
+        int customerId = (Integer) session.getAttribute("customerId");
+        
         session.setAttribute("offerId", offerId);
-        session.setAttribute("customerId", 2);
-        System.out.println(offerId);
+        session.setAttribute("customerId", customerId);
         if (offerId.equals(null))
             return null;
         else {
-            System.out.println("hHkk");
             return "go details";
+        }
+        }catch(Exception e){
+            return null;
         }
     }
 

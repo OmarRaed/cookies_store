@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui">
+        <h:head></h:head>
+        <h:body>
+            <h:body style="font-family:garamond;background-size: cover;color:#83677B;">
+                <h:form>
+                    <table style="padding:90px; padding-top: 70px;padding-left:250px">
+                        <tr>
+                            <td>
+                                <img src="data:image/png;base64,#{backing_product.product.imageString}"
+                                     alt="Image is not exist" height="350" width="450"/>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <h:outputText value="#{backing_product.product.productDescription}"
+                                              style="font-size:260%;font-weight:bold;margin-top:40"/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <h:outputText value="Price: "/>
+                                 
+                                <h:outputText value="#{backing_product.product.smallPrice}"/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <h:outputText value="Quantity:"/>
+                                 
+                                <br/>
+                                 
+                                <h:panelGrid columns="1" style="margin-bottom: 10px">
+                                    <p:inputText id="txt1" value="#{backing_product.quantity}"/>
+                                    <p:slider for="txt1"/>
+                                </h:panelGrid>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <br/>
+                                 
+                                <center>
+                                    <h:commandButton value="ADD TO CART"
+                                                     style="height:50px; width:250px; background-color:#83677B; border:none; color:white;"
+                                                     action="#{backing_product.addProductToCart}"></h:commandButton>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </h:form>
+            </h:body>
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_product-->
+</f:view>
