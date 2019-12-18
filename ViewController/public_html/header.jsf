@@ -7,53 +7,63 @@
             <link rel="stylesheet" media="screen" href="resources/css/home.css" type="text/css"/>
             <link rel="stylesheet" media="screen" href="resources/css/search.css" type="text/css"/>
         </h:head>
-        <h:body style="background-color:#d9d9d9;font-family:garamond;">
+        <h:body>
             <ui:composition>
                 <table style="width:100%;" id="panel" dir="ltr" cellpadding="30">
-                <tr>
-                    <td style="text-align:left; vertical-align:top;padding:0" colspan="2"  >
-                        <h:outputText style="color:white; font-weight:bold; font-size:550%;" value="Cookies"
-                                      id="cookies"/>
-                        <h:outputText style="color:#83677B; font-size:225%; font-weight:bold; column-gap:150px;" value="shop" id="shop"/>
-                    </td>
-                    <td style="text-align:left;padding:0" >
-                    <h:outputLink value="Test.jsf" style="text-decoration: none" id="home">
-                        <h:outputText styleClass="headerPanel" value="Home" id="hometxt"/>
-                    </h:outputLink>
-                    </td>
-                    
-                    <td style="text-align:left;padding:0">
-                        <h:selectOneMenu value="#{backing_header.cat_Name}" onchange="submit()"
-			valueChangeListener="#{backing_header.catogoryChanged}" style="color:#83677B;font-size:150%; margin-left:30;text-decoration: none ;
+                    <tr>
+                        <td style="text-align:left; vertical-align:top;padding:0" colspan="2">
+                            <h:outputText style="color:white; font-weight:bold; font-size:550%;" value="Cookies"
+                                          id="cookies"/>
+                             
+                            <h:outputText style="color:#83677B; font-size:225%; font-weight:bold; column-gap:150px;"
+                                          value="shop" id="shop"/>
+                        </td>
+                        <td style="text-align:left;padding:0">
+                            <h:outputLink value="home.jsf" style="text-decoration: none" id="home">
+                                <h:outputText styleClass="headerPanel" value="Home" id="hometxt"/>
+                            </h:outputLink>
+                        </td>
+                        <td style="text-align:left;padding:0">
+                            <h:form id="cato">
+                                <h:selectOneMenu onchange="submit()"
+                                                 valueChangeListener="#{backing_header.catogoryChanged}"
+                                                 style="color:#83677B;font-size:150%; margin-left:30;text-decoration: none ;
 					background-color:#d9d9d9;Border: none;font-family:garamond; outline:none;scroll-behavior: smooth;font-weight: bold;">
-   			<f:selectItems value="#{backing_header.countriesInMap}" />
-   		</h:selectOneMenu>
-
-                    </td>
-                    <td style="text-align:left;padding:0" >
-                    <h:outputLink value="Test.jsf" style="text-decoration:none" id="about">
-                        <h:outputText styleClass="headerPanel" value="About" id="abouttxt"/>
-                    </h:outputLink>
-                    </td>
-                    <td style="text-align:left;padding:0">
-                    <h:outputLink value="Test.jsf" style="text-decoration:none" id="suggestion">
-                        <h:outputText styleClass="headerPanel" value="Suggestion" id="suggestiontxt"/>
-                    </h:outputLink>
-                    </td>
-                    <td style="text-align:left;padding:0" >
-                    <h:selectOneMenu style="color:#83677B;font-size:150%;text-decoration: none ;
+                                    <f:selectItems value="#{backing_header.countriesInMap}"/>
+                                </h:selectOneMenu>
+                            </h:form>
+                        </td>
+                        <td style="text-align:left;padding:0">
+                            <h:outputLink value="about.jsf" style="text-decoration:none" id="about">
+                                <h:outputText styleClass="headerPanel" value="About" id="abouttxt"/>
+                            </h:outputLink>
+                        </td>
+                        <td style="text-align:left;padding:0">
+                            <h:outputLink value="suggestion.jsf" style="text-decoration:none" id="suggestion">
+                                <h:outputText styleClass="headerPanel" value="Suggestion" id="suggestiontxt"/>
+                            </h:outputLink>
+                        </td>
+                        <h:form id="acc">
+                            <td style="text-align:left;padding:0">
+                                <h:selectOneMenu onchange="submit()" valueChangeListener="#{backing_header.drd2Changed}"
+                                                 style="color:#83677B;font-size:150%;text-decoration: none ;
 					background-color:#d9d9d9;Border: none;font-family:garamond; outline:none;scroll-behavior: smooth;font-weight: bold;">
-                        <f:selectItem itemValue="Account" itemLabel="Account"/>
-                        <f:selectItem itemValue="Logout" itemLabel="Log Out"/>
-                    </h:selectOneMenu>
-                    </td >
-                    <td  style="text-align:center;" colspan="2">
-                        <h:inputText styleClass="search"  id="search_Val"/>
-                        <h:outputText  value="Search" style="font-weight:bold; color:#83677B;font-size:120%;text-decoration:none" id="search"/>
-                </td>
-                </tr>
+                                    <f:selectItem itemValue="Account" itemLabel="Account"/>
+                                    <f:selectItem itemValue="Logout" itemLabel="Log Out"/>
+                                </h:selectOneMenu>
+                            </td>
+                        </h:form>
+                        <td style="text-align:center;" colspan="2">
+                            <h:inputText styleClass="search" id="search_Val"/>
+                             
+                            <h:outputText value="Search"
+                                          style="font-weight:bold; color:#83677B;font-size:120%;text-decoration:none"
+                                          id="search"/>
+                        </td>
+                    </tr>
                 </table>
             </ui:composition>
+            
         </h:body>
     </html>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_header-->

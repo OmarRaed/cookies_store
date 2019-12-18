@@ -1,24 +1,26 @@
-<?xml version='1.0' encoding='windows-1252'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <body text="#564350" background="images/rsz_1cookies.png" style="font-family:garamond;background-size: cover;"
-          xmlns="http://www.w3.org/1999/xhtml">
-        <h:form></h:form>
-        <table align="center" style="margin-top:120px;background:#a58d9e; padding:8px; opacity:0.9" width="65%" height="80%">
-            <tr>
-                <td>
-                    <h:outputText style="font-size:180%;font-weight:bold;"  value="At Cookies Shop we are committed to baking and creating unique, personalized, delicious cookies. Using only the finest quality ingredients, we will strive to meet the highest expectations of every client. Our dedication to excellent customer service comes from an atmosphere of fun, and the love of what we do, which you will taste in every bite!"/>
-
-                <br/>
-
-                <h:outputText style="font-size:180%;font-weight:bold;"  value="What we do is simple: we make delicious cookies with healthy, natural ingredients. No, really. And if that doesn’t sound so simple (or even possible), it’s probably because our notions of &quot;healthy&quot; and &quot;delicious&quot; have been poked , prodded, processed and all around messed with more than, well, cookies!"/>
-                </td>
-            </tr>
-        </table>
-    </body>
-    <html xmlns="http://www.w3.org/1999/xhtml">
-        <h:head></h:head>
-        <h:body/>
-    </html>
-    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_about-->
-</f:view>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:body>
+        <ui:composition template="/layout.jsf">
+            <ui:define name="content">
+                <table align="center" style="margin-top:120px;background:#a58d9e; padding:8px; opacity:0.9" width="65%"
+                       height="80%">
+                    <tr>
+                        <td>
+                            <h:outputText style="font-size:180%;font-weight:bold;"
+                                          value="At Cookies Shop we are committed to baking and creating unique, personalized, delicious cookies. Using only the finest quality ingredients, we will strive to meet the highest expectations of every client. Our dedication to excellent customer service comes from an atmosphere of fun, and the love of what we do, which you will taste in every bite!"/>
+                             
+                            <br/>
+                             
+                            <h:outputText style="font-size:180%;font-weight:bold;"
+                                          value='What we do is simple: we make delicious cookies with healthy, natural ingredients. No, really. And if that doesnâ€™t sound so simple (or even possible), itâ€™s probably because our notions of "healthy" and "delicious" have been poked , prodded, processed and all around messed with more than, well, cookies!'/>
+                        </td>
+                    </tr>
+                </table>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+<!--oracle-jdev-comment:auto-binding-backing-bean-name:backing__7_facelets-->

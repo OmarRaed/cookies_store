@@ -2,6 +2,14 @@
 <faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
   <navigation-rule>
     <from-view-id>/home.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>Account</from-outcome>
+      <to-view-id>/account.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Logout</from-outcome>
+      <to-view-id>/signin.jsf</to-view-id>
+    </navigation-case>
   </navigation-rule>
   <navigation-rule>
     <from-view-id>/signin.jsf</from-view-id>
@@ -43,5 +51,33 @@
       <to-view-id>/offerDetails.jsf</to-view-id>
     </navigation-case>
   </navigation-rule>
-
+  <navigation-rule>
+    <from-view-id>/about.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>Account</from-outcome>
+      <to-view-id>/account.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Logout</from-outcome>
+      <to-view-id>/signin.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/suggestions.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>Account</from-outcome>
+      <to-view-id>/account.jsf</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>Logout</from-outcome>
+      <to-view-id>/signin.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/account.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>Logout</from-outcome>
+      <to-view-id>/signin.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
 </faces-config>

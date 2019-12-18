@@ -5,7 +5,7 @@
         <h:head></h:head>
         <h:body>
         <div id="page">
-            <div id="header">
+            <div style="background-color:#d9d9d9;font-family:garamond;" id="header">
                 <ui:insert name="header">
                     <ui:include src="/header.jsf"/>
                 </ui:insert>

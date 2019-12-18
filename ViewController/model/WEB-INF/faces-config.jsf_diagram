@@ -7,9 +7,9 @@
       <property
          name="jspName">/account.jsf</property>
       <property
-         name="x">87.0</property>
+         name="x">-152.51079</property>
       <property
-         name="y">178.49414</property>
+         name="y">258.15887</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -29,9 +29,9 @@
       <property
          name="jspName">/signin.jsf</property>
       <property
-         name="x">391.0</property>
+         name="x">-125.97955</property>
       <property
-         name="y">-150.20703</property>
+         name="y">-0.7654419</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -40,9 +40,9 @@
       <property
          name="jspName">/home.jsf</property>
       <property
-         name="x">332.0</property>
+         name="x">197.51428</property>
       <property
-         name="y">49.49414</property>
+         name="y">99.8548</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -51,9 +51,9 @@
       <property
          name="jspName">/signup.jsf</property>
       <property
-         name="x">264.0</property>
+         name="x">237.1275</property>
       <property
-         name="y">-149.50586</property>
+         name="y">-42.24951</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -67,7 +67,7 @@
       <property
          name="fromOutcome">success</property>
       <property
-         name="sdm:polyPoints">B50,391.0,-96.55762,335.5,-4.8564453,T56</property>
+         name="sdm:polyPoints">R50,-84.97955,-1.1160278,156.51428,96.00421,L46</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -79,7 +79,7 @@
       <property
          name="fromOutcome">account</property>
       <property
-         name="sdm:polyPoints">B50,264.0,-95.856445,328.5,-4.8564453,T44</property>
+         name="sdm:polyPoints">B50,237.1275,11.399902,197.51428,45.50421,T50</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -91,7 +91,7 @@
       <property
          name="fromOutcome">go to cart</property>
       <property
-         name="sdm:polyPoints">T56,482.5,385.79297,676.0,244.5459,B50</property>
+         name="sdm:polyPoints">T56,482.5,385.79297,676.0,243.84473,B50</property>
    </NavigationCase>
    <Page
       id="Page4">
@@ -132,9 +132,9 @@
       <property
          name="jspName">/about.jsf</property>
       <property
-         name="x">97.0</property>
+         name="x">59.0</property>
       <property
-         name="y">314.69434</property>
+         name="y">394.99316</property>
       <property
          name="wildcard">false</property>
    </Page>
@@ -143,10 +143,94 @@
       <property
          name="jspName">/suggestions.jsf</property>
       <property
-         name="x">259.0</property>
+         name="x">227.55066</property>
       <property
-         name="y">280.49414</property>
+         name="y">233.64905</property>
       <property
          name="wildcard">false</property>
    </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase17"
+      from="Page13"
+      to="Page2">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Account</property>
+      <property
+         name="sdm:polyPoints">L54,156.51428,103.00421,-111.51079,250.80829,R42</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase19"
+      from="Page8"
+      to="Page2">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Account</property>
+      <property
+         name="sdm:polyPoints">L50,18.0,394.64258,-111.51079,264.8083,R58</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase20"
+      from="Page9"
+      to="Page2">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Account</property>
+      <property
+         name="sdm:polyPoints">L54,186.55066,236.79846,-110.505264,257.8083,R50</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase21"
+      from="Page2"
+      to="Page12">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Logout</property>
+      <property
+         name="sdm:polyPoints">T50,-152.51079,203.80829,-132.97955,52.883972,B39</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase22"
+      from="Page8"
+      to="Page12">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Logout</property>
+      <property
+         name="sdm:polyPoints">T50,59.0,341.34375,-125.97955,55.92756,B50</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase23"
+      from="Page9"
+      to="Page12">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Logout</property>
+      <property
+         name="sdm:polyPoints">L46,186.55066,229.79846,-118.97955,52.883972,B61</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase24"
+      from="Page13"
+      to="Page12">
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="fromOutcome">Logout</property>
+      <property
+         name="sdm:polyPoints">L50,155.1559,99.50421,-84.97955,2.3839722,R54</property>
+   </NavigationCase>
 </SDM>

@@ -41,7 +41,7 @@ public class CategoryDaoImp implements CategoryDao {
                 
             }
         } catch (Exception e){ 
-            JOptionPane.showConfirmDialog(null, "error from data base");
+            JOptionPane.showConfirmDialog(null,e.getMessage());
             e.printStackTrace();
         }
         return catogories;
