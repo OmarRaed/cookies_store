@@ -56,10 +56,6 @@
       <from-outcome>goToCart</from-outcome>
       <to-view-id>/cart.jsf</to-view-id>
     </navigation-case>
-    <navigation-case>
-      <from-outcome>productDetails</from-outcome>
-      <to-view-id>/products_list.jsf</to-view-id>
-    </navigation-case>
   </navigation-rule>
   <navigation-rule>
     <from-view-id>/signup.jsf</from-view-id>
@@ -73,6 +69,13 @@
     <navigation-case>
       <from-outcome>success</from-outcome>
       <to-view-id>/offers.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/products_list.jsf</from-view-id>
+    <navigation-case>
+      <from-outcome>productDetails</from-outcome>
+      <to-view-id>/product.jsf</to-view-id>
     </navigation-case>
   </navigation-rule>
 </faces-config>

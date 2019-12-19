@@ -111,4 +111,26 @@ public class Cart {
     public HtmlDataTable getDataTable2() {
         return dataTable2;
     }
+
+    public void removeCart(int cartId) {
+
+        if (cartDao.removeCart(cartId)) {
+
+            cartList.clear();
+            totalPrice = 0;
+
+            HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                            .getExternalContext()
+                                                            .getSession(true);
+            int customerId = (Integer) session.getAttribute("customerId");
+            cartList = cartDao.getCart(customerId);
+            try {
+                for (CartDto cart : cartList)
+                    totalPrice += cart.getPrice();
+            } catch (NullPointerException e) {
+
+            }
+        }
+    }
+
 }

@@ -59,7 +59,7 @@ public class CartDaoImp implements CartDao{
 
     @Override
     public boolean addToCart(CartDto cart) {
-        try(JdbcRowSet jdbc = RowSetProvider.newFactory().createJdbcRowSet();){
+        try{
         System.out.println(cart.getProductId() + "CART DAO IMP PRODUCT ID");
         
         //set connection url , username and password
@@ -90,5 +90,32 @@ public class CartDaoImp implements CartDao{
         return false;
         }
         
+    }
+
+    @Override
+    public boolean removeCart(int cartId) {
+        
+        try{
+        
+            //set connection url , username and password
+            String dbURL = ConnectionFactory.getUrl();
+            String userName=ConnectionFactory.getUsername();
+            String userPwd=ConnectionFactory.getPassword();
+            Connection connection = null;
+            connection = DriverManager.getConnection(dbURL,userName,userPwd);
+            String sql = "DELETE FROM CART" +
+                                " WHERE CART_ID = ?";
+                
+                
+            connection.setAutoCommit(true);  
+            PreparedStatement statement = connection.prepareStatement(sql);  
+                
+            statement.setInt(1, cartId);            
+            statement.execute();
+                     
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+       return true;    
     }
 }
