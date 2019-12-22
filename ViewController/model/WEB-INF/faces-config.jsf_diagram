@@ -132,7 +132,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="fromOutcome">go details</property>
+         name="fromOutcome">details</property>
       <property
          name="sdm:polyPoints">B50,471.0,239.04004,475.5,385.79297,T44</property>
    </NavigationCase>

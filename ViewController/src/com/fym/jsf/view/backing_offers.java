@@ -92,7 +92,7 @@ public class backing_offers implements Serializable {
         if (offerId.equals(null))
             return null;
         else {
-            return "go details";
+            return "details";
         }
         }catch(Exception e){
             return null;

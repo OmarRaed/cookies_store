@@ -19,7 +19,7 @@
                                           value="shop" id="shop"/>
                         </td>
                         <td style="text-align:left;padding:0">
-                            <h:outputLink value="home.jsf" style="text-decoration: none" id="home">
+                            <h:outputLink value="offers.jsf" style="text-decoration: none" id="home">
                                 <h:outputText styleClass="headerPanel" value="Home" id="hometxt"/>
                             </h:outputLink>
                         </td>

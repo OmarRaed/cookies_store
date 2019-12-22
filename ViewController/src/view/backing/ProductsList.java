@@ -35,14 +35,21 @@ public class ProductsList {
     public void Init() {
 
         try {
-            products = productDao.getAllProducts();
+            HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                            .getExternalContext()
+                                                            .getSession(true);
+            int categoryId = Integer.parseInt(String.valueOf(session.getAttribute("cat_ID")));
+
+            products = productDao.getProductsByCategoryId(categoryId);
+            System.out.println("versionnnnnnnnnn :" + String.valueOf(products.size()));
         } catch (Exception e) {
+            e.printStackTrace();
         }
         HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
                                                         .getExternalContext()
                                                         .getSession(true);
         //        String version = FacesContext.class.getPackage().getImplementationVersion();
-              System.out.println("versionnnnnnnnnn :"+session.getAttribute("cat_ID"));
+        System.out.println("versionnnnnnnnnn :" + session.getAttribute("cat_ID"));
 
     }
 

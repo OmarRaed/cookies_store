@@ -22,7 +22,7 @@
   <navigation-rule>
     <from-view-id>/offers.jsf</from-view-id>
     <navigation-case>
-      <from-outcome>go details</from-outcome>
+      <from-outcome>details</from-outcome>
       <to-view-id>/offerDetails.jsf</to-view-id>
     </navigation-case>
   </navigation-rule>
