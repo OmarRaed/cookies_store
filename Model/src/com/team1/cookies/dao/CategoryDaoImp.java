@@ -15,6 +15,14 @@ import javax.sql.rowset.RowSetProvider;
 
 import javax.swing.JOptionPane;
 
+
+
+
+/*
+ * this created by H.Omar 
+ * this class is the responsable for taking with data base when we need to deal with Category table 
+ */
+
 public class CategoryDaoImp implements CategoryDao {
     public CategoryDaoImp() {
         super();

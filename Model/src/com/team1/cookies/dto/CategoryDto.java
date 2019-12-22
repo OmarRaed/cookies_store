@@ -1,7 +1,9 @@
 package com.team1.cookies.dto;
 
-import java.util.Date;
-
+/*
+ * this created by H.Omar 
+ * this class is the data transfer objects wich will travle between dao and front end 
+ */
 public class CategoryDto {
     public CategoryDto() {
         super();

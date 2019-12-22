@@ -1,6 +1,11 @@
 package com.team1.cookies.common;
+   
 
-import java.sql.SQLIntegrityConstraintViolationException;
+
+/*
+ * this created by H.Omar 
+ * this class is a custom exception
+ */
 
 public class CookiesException extends Exception{
     String exactMessage = "";

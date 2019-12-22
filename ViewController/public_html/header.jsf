@@ -48,6 +48,8 @@
                                 <h:selectOneMenu onchange="submit()" valueChangeListener="#{backing_header.drd2Changed}"
                                                  style="color:#83677B;font-size:150%;text-decoration: none ;
 					background-color:#d9d9d9;Border: none;font-family:garamond; outline:none;scroll-behavior: smooth;font-weight: bold;">
+                                    
+                                    <f:selectItem itemValue="User Options" itemLabel="User Options"/>                                   
                                     <f:selectItem itemValue="Account" itemLabel="Account"/>
                                     <f:selectItem itemValue="Cart" itemLabel="Cart"/>
                                     <f:selectItem itemValue="Our Appd" itemLabel="Our Appd"/>
