@@ -3,6 +3,7 @@ package view.backing;
 import com.team1.cookies.dao.DaoFactory;
 import com.team1.cookies.dto.CategoryDto;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import java.util.LinkedHashMap;
@@ -69,11 +70,41 @@ public class Header implements Serializable {
                                                         .getExternalContext()
                                                         .getSession(true);
         session.setAttribute("cat_ID", cat_ID);
+        try {
+            FacesContext.getCurrentInstance()
+                        .getExternalContext()
+                        .redirect("products_list.jsf");
+        } catch (IOException f) {
+        }
 
     }
+    
 
-    public String drd2Changed(ValueChangeEvent e) {
-        return e.toString();
+    public void drd2Changed(ValueChangeEvent e) {
+       String e_value = e.getNewValue().toString();
+        try {
+            if(e_value.equals("Account"))
+            {FacesContext.getCurrentInstance().getExternalContext().getSessionMap().clear();
+            FacesContext.getCurrentInstance()
+                        .getExternalContext()
+                        .redirect("products_list.jsf");}
+            else if(e_value.equals("Cart"))
+                {
+                FacesContext.getCurrentInstance()
+                            .getExternalContext()
+                            .redirect("cart.jsf");}
+            else if(e_value.equals("Our Appd"))
+                {
+                FacesContext.getCurrentInstance()
+                            .getExternalContext()
+                            .redirect("Dose_Home.jsf");}
+            else if(e_value.equals("Log Out"))
+                {
+                FacesContext.getCurrentInstance()
+                            .getExternalContext()
+                            .redirect("signin.jsf");}
+        } catch (IOException f) {
+        }
     }
 
     public void setCat_ID(Integer cat_ID) {

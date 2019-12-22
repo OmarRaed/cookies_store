@@ -49,7 +49,9 @@
                                                  style="color:#83677B;font-size:150%;text-decoration: none ;
 					background-color:#d9d9d9;Border: none;font-family:garamond; outline:none;scroll-behavior: smooth;font-weight: bold;">
                                     <f:selectItem itemValue="Account" itemLabel="Account"/>
-                                    <f:selectItem itemValue="Logout" itemLabel="Log Out"/>
+                                    <f:selectItem itemValue="Cart" itemLabel="Cart"/>
+                                    <f:selectItem itemValue="Our Appd" itemLabel="Our Appd"/>
+                                    <f:selectItem itemValue="Log Out" itemLabel="Log Out"/>
                                 </h:selectOneMenu>
                             </td>
                         </h:form>

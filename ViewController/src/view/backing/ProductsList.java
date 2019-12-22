@@ -38,8 +38,11 @@ public class ProductsList {
             products = productDao.getAllProducts();
         } catch (Exception e) {
         }
+        HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+                                                        .getExternalContext()
+                                                        .getSession(true);
         //        String version = FacesContext.class.getPackage().getImplementationVersion();
-        //        System.out.println("versionnnnnnnnnn :"+version);
+              System.out.println("versionnnnnnnnnn :"+session.getAttribute("cat_ID"));
 
     }
 
