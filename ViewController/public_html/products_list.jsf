@@ -1,9 +1,12 @@
 <?xml version='1.0' encoding='windows-1252'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets" >
         <h:head></h:head>
-        <h:body>
+        <h:body>>
+        <ui:composition template="/layout.jsf">
+            <ui:define name="content">
+              
             <h:form>
                 <p:dataGrid var="product" value="#{backing_products_list.products}" columns="3" layout="grid"
                             id="products" style="text-align:center;border:0;">
@@ -19,6 +22,8 @@
                     </p:panel>
                 </p:dataGrid>
             </h:form>
+            </ui:define>
+            </ui:composition>
         </h:body>
     </html>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_products_list-->

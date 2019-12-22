@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='windows-1252'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets">
         <h:head>
             <h:outputStylesheet library="css" name="tableStyle.css"/>
         </h:head>
         <h:body>
+                <ui:composition template="/layout.jsf">
+            <ui:define name="content">
             <h:form binding="#{backing_cart.form2}" id="form2">
                 <div style="text-align: center; margin-top:50px">
                     <h:outputText value="Your Shopping Cart!" id="outputText1" style="font-size:270%;font-weight:bold;color:#83677B;
@@ -48,6 +50,8 @@
                         ;color:#d9d9d9; border:none;margin-top:35px;margin-left:5px"/>
                 </div>
             </h:form>
+            </ui:define>
+            </ui:composition>
         </h:body>
     </html>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_cart-->

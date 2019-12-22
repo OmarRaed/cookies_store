@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='windows-1252'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/ui"  xmlns:ui="http://java.sun.com/jsf/facelets">
         <h:head></h:head>
-        <h:body>
-            <h:body style="font-family:garamond;background-size: cover;color:#83677B;">
-                <h:form>
+  <h:body style="font-family:garamond;background-size: cover;color:#83677B;">
+               
+        <ui:composition template="/layout.jsf">
+            <ui:define name="content">
+            <h:form>
                     <table style="padding:90px; padding-top: 70px;padding-left:250px">
                         <tr>
                             <td>
@@ -58,16 +60,16 @@
                                  
                                 <br/>
                                  
-                                <center>
                                     <h:commandButton value="ADD TO CART"
                                                      style="height:50px; width:250px; background-color:#83677B; border:none; color:white;"
                                                      action="#{backing_product.addProductToCart}"></h:commandButton>
-                                </center>
+                            
                             </td>
                         </tr>
                     </table>
                 </h:form>
-            </h:body>
+                </ui:define>
+                </ui:composition>
         </h:body>
     </html>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_product-->

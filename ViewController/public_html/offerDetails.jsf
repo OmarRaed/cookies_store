@@ -1,9 +1,11 @@
 <?xml version='1.0' encoding='windows-1256'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" >
         <h:head></h:head>
         <h:body style="font-family:garamond;background-size: cover;color:#83677B;">
+        <ui:composition template="/layout.jsf">
+            <ui:define name="content">
             <h:form>
                 <table style="padding:90px; padding-top: 70px;padding-left:250px">
                     <tr>
@@ -64,6 +66,8 @@
                     </tr>
                 </table>
             </h:form>
+            </ui:define>
+            </ui:composition>
         </h:body>
     </html>
 </f:view>
