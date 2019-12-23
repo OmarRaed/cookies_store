@@ -101,7 +101,7 @@ public class Header implements Serializable {
                 FacesContext.getCurrentInstance()
                             .getExternalContext()
                             .redirect("cart.jsf");
-            } else if (e_value.equals("Our Appd")) {
+            } else if (e_value.equals("Our Apps")) {
                 FacesContext.getCurrentInstance()
                             .getExternalContext()
                             .redirect("Dose_Home.jsf");

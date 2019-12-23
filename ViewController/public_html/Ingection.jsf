@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head>
+            <title>Ingection</title>
+        </h:head>
+        <h:body>
+            <h:form>
+                <div style="margin:auto">
+                    <table border="1" style="width:50%;" id="panel" dir="ltr" cellpadding="30">
+                        <tr>
+                            <th colspan="2">
+                                <h:outputLabel style="font-size:350%;" value="Antibiotics Calculation"/>
+                            </th>
+                        </tr>
+                         
+                        <tr>
+                            <td>
+                                <h:outputLabel value="Choose Injection"/>
+                            </td>
+                            <td>
+                                <h:selectOneMenu value="#{backing_Ingection.selectedInjection}">
+                                    <f:selectItems value="#{backing_Ingection.injection_NamesInMap}"/>
+                                </h:selectOneMenu>
+                            </td>
+                        </tr>
+                         
+                        <tr>
+                            <td>
+                                <h:outputLabel value="Enter Weight "/>
+                            </td>
+                            <td>
+                                <h:inputText value="#{backing_Ingection.weight}" id="weight"
+                                             converterMessage="Please enter digits only."
+                                             converter="javax.faces.BigDecimal"/>
+                            </td>
+                        </tr>
+                         
+                        <tr>
+                            <td colspan="2">
+                                <h:commandButton style="font-size:280%;" value="Calculate"
+                                                 action="#{backing_Ingection.calculateDose}" id="calculate"/>
+                            </td>
+                        </tr>
+                         
+                        <tr>
+                            <td align="right">
+                                <h:outputLabel value="Result :"/>
+                            </td>
+                            <td align="left">
+                                <h:outputLabel value="#{backing_Ingection.result} " id="result"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </h:form>
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_Ingection-->
+</f:view>

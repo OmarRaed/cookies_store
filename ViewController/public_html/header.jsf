@@ -52,7 +52,7 @@
                                     <f:selectItem itemValue="User Options" itemLabel="User Options"/>                                   
                                     <f:selectItem itemValue="Account" itemLabel="Account"/>
                                     <f:selectItem itemValue="Cart" itemLabel="Cart"/>
-                                    <f:selectItem itemValue="Our Appd" itemLabel="Our Appd"/>
+                                    <f:selectItem itemValue="Our Apps" itemLabel="Our Apps"/>
                                     <f:selectItem itemValue="Log Out" itemLabel="Log Out"/>
                                 </h:selectOneMenu>
                             </td>
