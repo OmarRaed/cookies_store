@@ -1,11 +1,5 @@
 package view.backing;
 
-import com.team1.cookies.bao.InjectionBao;
-import com.team1.cookies.bao.InjectionBaoImp;
-import com.team1.cookies.bao.OfferBao;
-import com.team1.cookies.bao.OfferBaoImp;
-import com.team1.cookies.dto.OfferDto;
-
 import java.util.ArrayList;
 
 import javax.annotation.Generated;
@@ -16,20 +10,14 @@ import javax.faces.bean.RequestScoped;
 import com.team1.doses.dto.InjectionDto;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
 @ManagedBean(name = "backing_Ingection")
 @RequestScoped
 @Generated(value = "1Ingection.jsf", comments = "oracle-jdev-comment:managed-bean-jsp-link")
 public class Ingection {
-    private InjectionBao injection_bao = new InjectionBaoImp();
-
-    
     private String selectedInjection;
     private static ArrayList<InjectionDto> injectionList = new ArrayList<InjectionDto>();
-    
-    //populate list from db
 
     private Integer weight;
     private String result;
@@ -38,8 +26,6 @@ public class Ingection {
         InjectionDto ampicillin_sulbactam_150_Mg = new InjectionDto(150, 2, "Injection ampicillin_sulbactam_150_Mg");
         InjectionDto ceftriaxone_50_Mg = new InjectionDto(50, 2, "ceftriaxone_50_Mg");
         InjectionDto cefotaxime_100_Mg = new InjectionDto(100, 2, "cefotaxime_100_Mg");
-        
-        injectionList.addAll(injection_bao.getAllInjections());
 
         injectionList.add(ampicillin_sulbactam_150_Mg);
         injectionList.add(ceftriaxone_50_Mg);
